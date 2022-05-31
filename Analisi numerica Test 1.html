@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Fattori primi</title>
+
+    <script>
+        function fattori1000() {
+            let maxCont = -1,
+                cont, contFattori, sommafattori = 0;
+            for (let i = 1; i < 1000; i++) {
+                cont = fattorizzatore(i);
+                if (maxCont < cont) {
+                    maxCont = cont;
+                    contFattori = i;
+                } else {
+                    sommafattori++;
+                }
+            }
+            return contFattori;
+        }
+
+        function fattori1000_1() {
+            let maxCont = -1,
+                cont, contFattori;
+            for (let Var = 1000; Var < 2000; Var++) {
+                cont = fattorizzatore(Var);
+                if (maxCont < cont) {
+                    maxCont = cont;
+                    contFattori = Var;
+                } else {
+
+                }
+            }
+            return contFattori;
+        }
+
+        function moltiplica() {
+            let num1 = fattori1000(),
+                num2 = fattori1000_1(),
+                moltiplicazione = num1 * num2;
+            document.getElementById("output3").innerText = moltiplicazione;
+            document.getElementById("output1").innerHTML = num1;
+            document.getElementById("output2").innerHTML = num2;
+        }
+
+        function fattorizzatore(n) {
+            let cont = 0;
+            let rompiloop = n / 2;
+            for (let fattore = 1; fattore <= rompiloop; fattore++) {
+                if (n % fattore == 0) {
+                    cont++;
+                }
+            }
+            return cont;
+        }
+    </script>
+</head>
+
+</html>

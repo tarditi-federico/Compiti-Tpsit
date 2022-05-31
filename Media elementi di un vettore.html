@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Media Vettore</title>
+</head>
+<script>
+    let array = [];
+    let somma = 0;
+    let cmedia;
+
+    function media() {
+        for (let i = 0; i < 50; i++) {
+            array[i] = Math.round(Math.random() * 100);
+            document.getElementById('scrivi').innerHTML += array[i] + ' ';
+            somma += array[i];
+        }
+    }
+
+    function scrivimedia() {
+        cmedia = somma / 50
+        document.getElementById('media').innerHTML = 'Media: ' + cmedia;
+    }
+</script>
+
+<body onload="media()">
+    <p id="scrivi"></p>
+    <button onclick="scrivimedia()">
+        Cliccami per fare la media dei numeri
+    </button>
+    <div>
+        <p id="media"></p>
+    </div>
+</body>
+
+</html>

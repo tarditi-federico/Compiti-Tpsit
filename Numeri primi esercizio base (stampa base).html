@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <title>conteggio numeri primi</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body onLoad="start()">
+    <script src="script.js"></script>
+
+    <script>
+        let contvet = 0;
+        let array = [];
+
+        function ricercaprimi(n) {
+            let primo = false;
+            for (let i = 2; i < n / 2 + 1 && !primo; i++) {
+                if (n % i == 0) {
+                    primo = true;
+                }
+            }
+            if (!primo) {
+                array[contvet] = n;
+                contvet++;
+            }
+        }
+
+        function start() {
+            for (let j = 1; j < 10000000; j++) {
+                ricercaprimi(j);
+            }
+
+            for (let j = 0; j < contvet; j++) {
+                document.getElementById("output").innerHTML += array[j] + " ";
+            }
+            contvet = 0;
+        }
+    </script>
+
+    <p id="output"></p>
+
+</body>
+
+</html>

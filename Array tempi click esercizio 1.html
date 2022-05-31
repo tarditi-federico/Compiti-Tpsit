@@ -1,0 +1,44 @@
+<html lang="en">
+
+<head>
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        div {
+            border-width: 2px 2px 2px 2px;
+            border-style: solid;
+            border-color: black;
+            height: 200px;
+            width: 200px;
+        }
+    </style>
+    <button onclick="tempo()">Cliccami</button>
+    <p id="out">Tempo</p>
+    <div id="div"></div>
+    <script>
+        let mioarraytempi = [];
+
+        let cont = 0;
+
+        let tempoiniziale = Date.now();
+
+        function tempo() {
+            let tempodalclick = Date.now() - tempoiniziale;
+            mioarraytempi.push(tempodalclick);
+            stampaArray();
+        }
+
+        function stampaArray() {
+            if (cont == 0) {
+                document.getElementById("out").innerHTML = mioarraytempi;
+                cont++
+                if (mioarraytempi < 2000) {
+                    document.getElementById('div').style.backgroundColor = "red";
+                } else {
+                    document.getElementById('div').style.backgroundColor = "green";
+                }
+            }
+        }
+    </script>
