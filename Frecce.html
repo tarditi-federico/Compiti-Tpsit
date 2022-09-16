@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .button {
+            background-color: rgb(15, 99, 224);
+            border: solid black;
+            color: black;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 4px;
+            cursor: pointer;
+            width: 100px;
+            height: 100px;
+        }
+
+        .button2 {
+            background-color: rgb(15, 99, 224);
+            color: black;
+        }
+
+        .button3 {
+            background-color: rgb(15, 99, 224);
+            color: black;
+        }
+
+        .button4 {
+            background-color: rgb(15, 99, 224);
+            color: black;
+        }
+
+        .button5 {
+            background-color: rgb(15, 99, 224);
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <script>
+        let U = 0;
+        let R = 0;
+
+        function myFunctionSu() {
+            U++;
+            document.getElementById("vert").innerHTML = "Verticale: " + U;
+        }
+        function myFunctionGiu() {
+            U--;
+            document.getElementById("vert").innerHTML = "Verticale: " + U;
+        }
+        function myFunctionD() {
+            R++;
+            document.getElementById("orizz").innerHTML = "Orizzontale: " + R;
+        }
+        function myFunctionS() {
+            R--;
+            document.getElementById("orizz").innerHTML = "Orizzontale: " + R;
+        }
+    </script>
+
+
+    <button class="button">┎</button>
+    <button onclick="myFunctionSu()" class="button">🠕</button>
+    <button class="button">┑</button>
+    <br>
+    <button onclick="myFunctionS()" class="button">🠔</button>
+    <button class="button">+</button>
+    <button onclick="myFunctionD()" class="button">→</button>
+    <br>
+    <button class="button">┗</button>
+    <button onclick="myFunctionGiu()" class="button">↓</button>
+    <button class="button">┛</button>
+    <p id="vert">Verticale: </p>
+    <br>
+    <p id="orizz">Orizzontale: </p>
+</body>
+
+</html>
