@@ -1,0 +1,146 @@
+<HTML>
+
+<SCRIPT Language='JavaScript'>
+
+    function inizia() {
+        var a = document.getElementById('A');
+        var b = document.getElementById('B');
+        var c = document.getElementById('C');
+        var d = document.getElementById('D');
+        var e = document.getElementById('E');
+
+        setInterval(function () {
+            v = 400;
+            w = 325;
+            x = 250;
+            y = 175;
+            z = 100;
+            M = 0;
+
+            v = parseInt(e.offsetLeft);
+            w = parseInt(d.offsetLeft);
+            x = parseInt(c.offsetLeft);
+            y = parseInt(b.offsetLeft);
+            z = parseInt(a.offsetLeft);
+
+
+            if (v < 500) {
+                v = v + 5;
+                e.style.left = v;
+            }
+
+            else if (w < 440) {
+                w = w + 5;
+                d.style.left = w;
+            }
+
+            else if (x < 380) {
+                x = x + 5;
+                c.style.left = x;
+            }
+            else if (y < 320) {
+                y = y + 5;
+                b.style.left = y;
+            }
+            else if (z < 260) {
+                z = z + 5;
+                a.style.left = z;
+            }
+        }, 20);
+    }
+
+    function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
+    }
+</SCRIPT>
+
+<HEAD>
+    <TITLE>quadratoni :)</TITLE>
+</HEAD>
+
+<style type="text/css">
+    #A {
+        left: 10px;
+        top: 50px;
+        height: 50px;
+        background-color: rgb(0, 133, 241);
+        color: black;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        font-size: 20px;
+        border-width: 1px;
+        border: solid black;
+    }
+
+    #B {
+        left: 70px;
+        top: 50px;
+        height: 50px;
+        background-color: rgb(0, 133, 241);
+        color: black;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        font-size: 20px;
+        border-width: 1px;
+        border: solid black;
+    }
+
+    #C {
+        left: 130px;
+        top: 50px;
+        height: 50px;
+        background-color: rgb(0, 133, 241);
+        color: black;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        font-size: 20px;
+        border-width: 1px;
+        border: solid black;
+    }
+
+    #D {
+        left: 190px;
+        top: 50px;
+        height: 50px;
+        background-color: rgb(0, 133, 241);
+        color: black;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        font-size: 20px;
+        border-width: 1px;
+        border: solid black;
+    }
+
+    #E {
+        left: 250px;
+        top: 50px;
+        height: 50px;
+        background-color: rgb(0, 133, 241);
+        color: black;
+        position: absolute;
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        font-size: 20px;
+        border-width: 1px;
+        border: solid black;
+    }
+</style>
+
+<BODY onLoad="inizia()">
+    <DIV id='A'></DIV>
+    <DIV id='B'></DIV>
+    <DIV id='C'></DIV>
+    <DIV id='D'></DIV>
+    <DIV id='E'></DIV>
+</BODY>
+
+</HTML>
